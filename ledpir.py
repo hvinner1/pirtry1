@@ -24,7 +24,7 @@ try:
 except KeyboardInterrupt: #Ctrl+c
   pass #Do nothing, continue to finally
 
-finally:
-  GPIO.output(led, False) #Turn off LED in case left on
+#finally:
+  #GPIO.output(led, False) #Turn off LED in case left on
 GPIO.cleanup() #reset all GPIO
 print ("Program ended")
