@@ -4,8 +4,10 @@ import time
 GPIO.setmode(GPIO.BCM) #Set GPIO to pin numbering
 pir = 23 #Assign pin 8 to PIR
 led = 21 #Assign pin 10 to LED
+tled = 17
 GPIO.setup(pir, GPIO.IN) #Setup GPIO pin PIR as input
 GPIO.setup(led, GPIO.OUT) #Setup GPIO pin for LED as output
+GPIO.setup(tled, GPIO.OUT)
 print ("Sensor initializing . . .")
 time.sleep(2) #Give sensor time to startup
 print ("Active")
@@ -21,6 +23,14 @@ try:
       time.sleep(4) #Keep LED on for 4 seconds
       print ("led on!")
       GPIO.output(led, GPIO.LOW) #Turn off LED
+      time.sleep(.5)
+      #some chanfes
+    else:
+      print ("No Motion Detected!")
+      GPIO.output(tled, GPIO.HIGH) #Turn on LED
+      time.sleep(4) #Keep LED on for 4 seconds
+      print ("led on!")
+      GPIO.output(tled, GPIO.LOW) #Turn off LED
       time.sleep(.5)
       #some chanfes
 
