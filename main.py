@@ -12,5 +12,5 @@ print ('Ready')
 
 while True:
   if GPIO.input(PIR_PIN):
-    print(PIR_PIN)
+    print(GPIO.output(PIR_PIN))
   time.sleep(1)
