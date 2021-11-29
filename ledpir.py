@@ -11,7 +11,7 @@ time.sleep(2) #Give sensor time to startup
 print ("Active")
 print ("Press Ctrl+c to end program")
 GPIO.output(led, GPIO.HIGH)
-time.sleep(4)
+time.sleep(1)
 GPIO.output(led, GPIO.LOW)
 try:
   while True:
