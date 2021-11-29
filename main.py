@@ -12,5 +12,5 @@ print ('Ready')
 
 while True:
   if GPIO.input(PIR_PIN):
-    print('Motion Detected')
+    print(PIR_PIN)
   time.sleep(1)
