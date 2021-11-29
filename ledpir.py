@@ -12,14 +12,14 @@ print ("Active")
 print ("Press Ctrl+c to end program")
 GPIO.output(led, GPIO.HIGH)
 time.sleep(4)
-GPIO.output(led, GPIO.HIGH)
+GPIO.output(led, GPIO.LOW)
 try:
   while True:
     if GPIO.input(pir) == True: #If PIR pin goes high, motion is detected
       print ("Motion Detected!")
       GPIO.output(led, GPIO.HIGH) #Turn on LED
-      print ("led on!")
       time.sleep(4) #Keep LED on for 4 seconds
+      print ("led on!")
       #GPIO.output(led, GPIO.LOW) #Turn off LED
       #time.sleep(0.1)
       #some chanfes
