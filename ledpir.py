@@ -20,6 +20,7 @@ try:
       time.sleep(4) #Keep LED on for 4 seconds
       #GPIO.output(led, GPIO.LOW) #Turn off LED
       #time.sleep(0.1)
+      #some chanfes
 
 except KeyboardInterrupt: #Ctrl+c
   pass #Do nothing, continue to finally
