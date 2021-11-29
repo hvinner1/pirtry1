@@ -20,8 +20,8 @@ try:
       GPIO.output(led, GPIO.HIGH) #Turn on LED
       time.sleep(4) #Keep LED on for 4 seconds
       print ("led on!")
-      #GPIO.output(led, GPIO.LOW) #Turn off LED
-      #time.sleep(0.1)
+      GPIO.output(led, GPIO.LOW) #Turn off LED
+      time.sleep(.5)
       #some chanfes
 
 except KeyboardInterrupt: #Ctrl+c
