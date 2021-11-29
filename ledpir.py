@@ -10,7 +10,9 @@ print ("Sensor initializing . . .")
 time.sleep(2) #Give sensor time to startup
 print ("Active")
 print ("Press Ctrl+c to end program")
-
+GPIO.output(led, GPIO.HIGH)
+time.sleep(4)
+GPIO.output(led, GPIO.HIGH)
 try:
   while True:
     if GPIO.input(pir) == True: #If PIR pin goes high, motion is detected
