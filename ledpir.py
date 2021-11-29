@@ -3,7 +3,7 @@ import time
 
 GPIO.setmode(GPIO.BOARD) #Set GPIO to pin numbering
 pir = 23 #Assign pin 8 to PIR
-led = 12 #Assign pin 10 to LED
+led = 21 #Assign pin 10 to LED
 GPIO.setup(pir, GPIO.IN) #Setup GPIO pin PIR as input
 GPIO.setup(led, GPIO.OUT) #Setup GPIO pin for LED as output
 print ("Sensor initializing . . .")
