@@ -29,10 +29,10 @@ try:
       GPIO.output(led, GPIO.LOW) #Turn off LED
       time.sleep(.5)
       #some chanfes
-      while True:
+      '''while True:
         buzzState = not buzzState
         GPIO.output(buz, buzzState)
-        time.sleep(1)
+        time.sleep(1)'''
     else:
       print ("No Motion Detected!")
       GPIO.output(tled, GPIO.HIGH) #Turn on LED
