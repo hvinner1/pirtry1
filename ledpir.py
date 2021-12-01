@@ -8,6 +8,11 @@ GPIO.setup(pir, GPIO.IN) #Setup GPIO pin PIR as input
 GPIO.setup(led, GPIO.OUT) #Setup GPIO pin for LED as output
 print ("Sensor initializing . . .")
 time.sleep(2) #Give sensor time to startup
+GPIO.output(led, GPIO.LOW)
+print ("Sensor initializing . . .")
+time.sleep(30) #Give sensor time to startup
+print ("50% . . .")
+time.sleep(30) #Give sensor time to startup
 print ("Active")
 print ("Press Ctrl+c to end program")
 GPIO.output(led, GPIO.HIGH)
@@ -70,10 +75,10 @@ try:
       GPIO.output(led, GPIO.LOW) #Turn off LED
       time.sleep(.5)
       #some chanfes
-      '''while True:
+      while True:
         buzzState = not buzzState
         GPIO.output(buz, buzzState)
-        time.sleep(1)'''
+        time.sleep(1)
     else:
       print ("No Motion Detected!")
       print (GPIO.input(pir))
