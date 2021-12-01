@@ -28,6 +28,7 @@ try:
       GPIO.output(led, GPIO.HIGH) #Turn on LED
       time.sleep(4) #Keep LED on for 4 seconds
       print ("led on!")
+      print (GPIO.input(pir))
       GPIO.output(led, GPIO.LOW) #Turn off LED
       time.sleep(.5)
       #some chanfes
@@ -37,6 +38,7 @@ try:
         time.sleep(1)'''
     else:
       print ("No Motion Detected!")
+      print (GPIO.input(pir))
       GPIO.output(tled, GPIO.HIGH) #Turn on LED
       time.sleep(4) #Keep LED on for 4 seconds
       #print ("led on!")
