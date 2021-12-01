@@ -13,7 +13,9 @@ GPIO.setup(pir, GPIO.IN) #Setup GPIO pin PIR as input
 GPIO.setup(led, GPIO.OUT) #Setup GPIO pin for LED as output
 GPIO.setup(tled, GPIO.OUT)
 print ("Sensor initializing . . .")
-time.sleep(2) #Give sensor time to startup
+time.sleep(30) #Give sensor time to startup
+print ("50% . . .")
+time.sleep(30) #Give sensor time to startup
 print ("Active")
 print ("Press Ctrl+c to end program")
 GPIO.output(led, GPIO.HIGH)
