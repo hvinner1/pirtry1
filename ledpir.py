@@ -6,8 +6,6 @@ pir = 23 #Assign pin 8 to PIR
 led = 21 #Assign pin 10 to LED
 GPIO.setup(pir, GPIO.IN) #Setup GPIO pin PIR as input
 GPIO.setup(led, GPIO.OUT) #Setup GPIO pin for LED as output
-print ("Sensor initializing . . .")
-time.sleep(2) #Give sensor time to startup
 GPIO.output(led, GPIO.LOW)
 print ("Sensor initializing . . .")
 time.sleep(30) #Give sensor time to startup
@@ -23,11 +21,12 @@ try:
     if GPIO.input(pir) == True: #If PIR pin goes high, motion is detected
       print ("Motion Detected!")
       GPIO.output(led, GPIO.HIGH) #Turn on LED
-      time.sleep(4) #Keep LED on for 4 seconds
+      time.sleep(3) #Keep LED on for 3 seconds
       print ("led on!")
       GPIO.output(led, GPIO.LOW) #Turn off LED
-      time.sleep(.5)
+      time.sleep(.1)
       #some chanfes
+    print(GPIO.input(pir))
 
 except KeyboardInterrupt: #Ctrl+c
   pass #Do nothing, continue to finally
