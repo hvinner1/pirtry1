@@ -26,8 +26,8 @@ try:
       GPIO.output(led, GPIO.LOW) #Turn off LED
       time.sleep(.1)
       #some chanfes
-    print("not detected")
-    time.sleep(3)
+    #print("not detected")
+    #time.sleep(3)
 
 except KeyboardInterrupt: #Ctrl+c
   pass #Do nothing, continue to finally
