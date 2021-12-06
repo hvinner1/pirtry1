@@ -23,7 +23,7 @@ C4 = 16
 # being held down or -1 if no key is pressed
 keypadPressed = -1
 
-secretCode = "123456789"
+secretCode = "1234"
 input = ""
 
 # Setup GPIO
@@ -66,6 +66,7 @@ def setAllLines(state):
 
 def checkSpecialKeys():
     global input
+    global secretCode
     pressed = False
 
     GPIO.output(L3, GPIO.HIGH)
@@ -76,6 +77,17 @@ def checkSpecialKeys():
         pressed = True
 
     GPIO.output(L3, GPIO.LOW)
+        #new code for changing secrete code
+    GPIO.output(L4, GPIO.HIGH)
+
+    if (GPIO.input(C4) == 1):
+        print(input)
+        print("changing code...")
+        secretCode = input
+        print(secretCode)
+        pressed = True
+    GPIO.output(L4, GPIO.LOW)
+#end of new code
     GPIO.output(L1, GPIO.HIGH)
 
     if (not pressed and GPIO.input(C4) == 1):
