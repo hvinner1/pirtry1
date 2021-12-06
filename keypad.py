@@ -1,5 +1,5 @@
 # This program allows a user to enter a
-# Code. If the D-Button is pressed on the
+# Code. If the c-Button is pressed on the
 # keypad, the input is reset. If the user
 # hits the A-Button, the input is checked.
 
@@ -23,7 +23,7 @@ C4 = 16
 # being held down or -1 if no key is pressed
 keypadPressed = -1
 
-secretCode = "1234"
+secretCode = "123456789"
 input = ""
 
 # Setup GPIO
