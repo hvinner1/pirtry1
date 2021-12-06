@@ -83,6 +83,10 @@ def checkSpecialKeys():
             # TODO: Unlock a door, turn a light on, etc.
         else:
             print("Incorrect code!")
+            print(one)
+            print(two)
+            print(three)
+            print(four)
             # TODO: Sound an alarm, send an email, etc.
         pressed = True
 
