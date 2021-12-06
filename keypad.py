@@ -130,12 +130,12 @@ try:
                 time.sleep(0.1)
             else:
                 time.sleep(0.1)
-        print(one)
+        '''print(one)
         print(two)
         print(three)
         print(four)
         print ("code done")
-        time.sleep(0.1)
+        time.sleep(0.1)'''
         
 except KeyboardInterrupt:
     print("\nApplication stopped!")
