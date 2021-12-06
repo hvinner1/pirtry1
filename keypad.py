@@ -71,6 +71,7 @@ def checkSpecialKeys():
     GPIO.output(L3, GPIO.HIGH)
 
     if (GPIO.input(C4) == 1):
+        print(input)
         print("Input reset!");
         pressed = True
 
@@ -83,10 +84,7 @@ def checkSpecialKeys():
             # TODO: Unlock a door, turn a light on, etc.
         else:
             print("Incorrect code!")
-            print(one)
-            print(two)
-            print(three)
-            print(four)
+            print(input)
             # TODO: Sound an alarm, send an email, etc.
         pressed = True
 
