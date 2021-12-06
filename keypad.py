@@ -68,14 +68,14 @@ def checkSpecialKeys():
     global input
     pressed = False
 
-    GPIO.output(L4, GPIO.HIGH)
+    GPIO.output(L3, GPIO.HIGH)
 
     if (GPIO.input(C4) == 1):
         print("Input reset!");
         pressed = True
 
-    GPIO.output(L4, GPIO.LOW)
-    GPIO.output(L1, GPIO.HIGH)
+    GPIO.output(L3, GPIO.LOW)
+    GPIO.output(L4, GPIO.HIGH)
 
     if (not pressed and GPIO.input(C4) == 1):
         if input == secretCode:
