@@ -17,7 +17,7 @@ L4 = 5
 C1 = 6
 C2 = 19
 C3 = 26
-C4 = 20
+C4 = 18
 
 # The GPIO pin of the column of the key that is currently
 # being held down or -1 if no key is pressed
