@@ -76,7 +76,7 @@ def checkSpecialKeys():
         pressed = True
 
     GPIO.output(L3, GPIO.LOW)
-    GPIO.output(L4, GPIO.HIGH)
+    GPIO.output(L1, GPIO.HIGH)
 
     if (not pressed and GPIO.input(C4) == 1):
         if input == secretCode:
