@@ -1,5 +1,5 @@
 # This program allows a user to enter a
-# Code. If the C-Button is pressed on the
+# Code. If the D-Button is pressed on the
 # keypad, the input is reset. If the user
 # hits the A-Button, the input is checked.
 
@@ -68,13 +68,13 @@ def checkSpecialKeys():
     global input
     pressed = False
 
-    GPIO.output(L3, GPIO.HIGH)
+    GPIO.output(L4, GPIO.HIGH)
 
     if (GPIO.input(C4) == 1):
         print("Input reset!");
         pressed = True
 
-    GPIO.output(L3, GPIO.LOW)
+    GPIO.output(L4, GPIO.LOW)
     GPIO.output(L1, GPIO.HIGH)
 
     if (not pressed and GPIO.input(C4) == 1):
