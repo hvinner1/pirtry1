@@ -89,7 +89,8 @@ def loop():
 		
 
 try:
-	loop()
+	#loop()
+  print(print(GPIO.output(12,GPIO.HIGH)))
 except KeyboardInterrupt:
 	pass
 	exit()
