@@ -2,7 +2,7 @@
 
 import RPi.GPIO as GPIO
 import time
-DHTPin = 11  #port to send and read
+DHTPin = 12  #port to send and read
 
 class DHT(object):
 	DHTLIB_OK = 0
