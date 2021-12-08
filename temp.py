@@ -83,14 +83,8 @@ def loop():
 	dht = DHT(DHTPin)#create a DHT class object
 	while(True):
 		check = dht.readDHT11()#read DHT11 and get a return value. Then determine whether data read is normal according to the return value.
-		if (check is dht.DHTLIB_OK):
-			print("Humidity : %.2f,  Temperature : %.2f "%(dht.humidity,dht.temperature))
-		elif (check is dht.DHTLIB_ERROR_CHECKSUM):
-			print("Humidity : %.2f,  Temperature : %.2f  (this value may incorrect)"%(dht.humidity,dht.temperature))
-		#elif (check is dht.DHTLIB_ERROR_TIMEOUT):
-		#	print("Timeout! ")
-		#else:
-		#	print("unknow problem! ")
+		
+		print("Humidity : %.2f,  Temperature : %.2f "%(dht.humidity,dht.temperature))
 		time.sleep(2)
 		
 
