@@ -93,9 +93,9 @@ def loop():
 		#	print("unknow problem! ")
 		time.sleep(2)
 		
-if __name__ == '__main__':
-	try:
-		loop()
-	except KeyboardInterrupt:
-		pass
-		exit()
+
+try:
+	loop()
+except KeyboardInterrupt:
+	pass
+	exit()
